@@ -1,0 +1,1 @@
+"""Spectra AI Companion package."""
