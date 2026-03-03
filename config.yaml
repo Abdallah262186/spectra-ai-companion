@@ -1,0 +1,48 @@
+model:
+  name: "Qwen/Qwen2-1.5B-Instruct"
+  quantization: "8bit"
+  max_new_tokens: 150
+  temperature: 0.7
+  device: "cuda:0"
+
+companion:
+  name: "Spectra"
+  personality: "friendly, curious, witty, concise"
+  quiet_hours_start: 23
+  quiet_hours_end: 8
+
+proactive:
+  enabled: true
+  min_interval_minutes: 30
+  max_interval_minutes: 120
+
+training:
+  enabled: true
+  trigger_every_n_conversations: 50
+  lora_rank: 8
+  lora_alpha: 16
+  learning_rate: 0.0002
+  epochs: 3
+  adapter_save_path: "adapters/"
+
+monitoring:
+  spotify: true
+  browser: true
+  downloads: true
+  processes: true
+  downloads_path: "~/Downloads"
+
+search:
+  enabled: true
+  max_results: 3
+
+database:
+  path: "spectra_memory.db"
+
+scan:
+  folders:
+    - "~/Documents"
+    - "~/Downloads"
+    - "~/Music"
+  scan_registry: true
+  scan_bookmarks: true

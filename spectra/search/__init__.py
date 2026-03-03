@@ -1,0 +1,1 @@
+"""Spectra search sub-package."""
